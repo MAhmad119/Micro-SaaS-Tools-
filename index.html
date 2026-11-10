@@ -3,144 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Mughal — Enterprise Micro-SaaS & Developer Studio</title>
+    <title>SaaS Tools Hub | Micro-SaaS Boilerplates & Web Utilities</title>
+    <meta name="description" content="Explore self-hosted micro-SaaS boilerplates, developer tools, AI email generators, and student planners with full source code access.">
+    <meta name="robots" content="index, follow">
+
+    <!-- GOOGLE ADSENSE CODE PLACEHOLDER -->
+    <!-- Replace ca-pub-XXXXXXXXXXXXXXXX with your real AdSense Publisher ID -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0B0F19',
+                        brandCard: '#111827',
+                        brandAccent: '#2563EB'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-[#09090b] text-slate-100 min-h-screen flex flex-col items-center py-16 px-4 selection:bg-blue-600 selection:text-white">
+<body class="bg-brandDark text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Ambient Background Glow -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
-
-    <!-- Pro Header Section -->
-    <div class="max-w-xl w-full text-center mb-12 relative z-10">
-        <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full text-xs font-medium text-blue-400 mb-4">
-            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            <span>Available for Custom Software & SaaS Development</span>
-        </div>
-        
-        <div class="w-20 h-20 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold mb-4 shadow-2xl shadow-blue-500/20 border border-blue-400/30">
-            ⚡
-        </div>
-        
-        <h1 class="text-3xl font-bold tracking-tight text-white flex items-center justify-center gap-2">
-            Ahmad Mughal 
-            <svg class="w-5 h-5 text-blue-500 fill-current" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-        </h1>
-        <p class="text-slate-400 text-sm mt-2 max-w-md mx-auto leading-relaxed">
-            Building production-ready, high-performance micro-SaaS boilerplates and custom web tools. Fully self-hosted & open-license.
-        </p>
-    </div>
-
-    <!-- Main SaaS Utilities Container -->
-    <div class="max-w-xl w-full space-y-3 relative z-10">
-        
-        <!-- Tool 1: OutreachAI -->
-        <div class="group bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-black/40">
-            <div class="space-y-1">
-                <div class="flex items-center space-x-2">
-                    <h3 class="font-semibold text-sm text-slate-200 group-hover:text-blue-400 transition">OutreachAI</h3>
-                    <span class="text-[10px] bg-blue-500/10 text-blue-400 font-medium px-2 py-0.5 rounded-md border border-blue-500/20">Flagship</span>
-                </div>
-                <p class="text-xs text-slate-400">AI-powered cold email & prospect conversion engine</p>
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-brandDark/90 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-lg">⚡</div>
+                <span class="font-extrabold text-xl text-white tracking-tight">SaaS Tools Hub</span>
             </div>
-            <div class="flex items-center space-x-2">
-                <a href="https://ai-outreach-web.vercel.app/" target="_blank" class="text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-2 rounded-xl border border-slate-700/50 transition">Demo</a>
-                <a href="https://link.payoneer.com/Token?t=BCF33367AACD45248CC2E3D60535E5FA&src=mobile" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl shadow-lg shadow-blue-600/20 transition">Buy $299</a>
-            </div>
-        </div>
-
-        <!-- Tool 2: Agency Proposal Builder -->
-        <div class="group bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-black/40">
-            <div class="space-y-1">
-                <div class="flex items-center space-x-2">
-                    <h3 class="font-semibold text-sm text-slate-200 group-hover:text-blue-400 transition">Agency Proposal Builder</h3>
-                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 font-medium px-2 py-0.5 rounded-md border border-emerald-500/20">Popular</span>
-                </div>
-                <p class="text-xs text-slate-400">High-converting client proposal & contract generator</p>
-            </div>
-            <div class="flex items-center space-x-2">
-                <a href="https://agency-proposal-builder.vercel.app/" target="_blank" class="text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-2 rounded-xl border border-slate-700/50 transition">Demo</a>
-                <a href="https://link.payoneer.com/Token?t=336317ACB9E74DE6A25C9350A6391816&src=mobile" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl shadow-lg shadow-blue-600/20 transition">Buy $149</a>
-            </div>
-        </div>
-
-        <!-- Tool 3: DevTools Hub Pro -->
-        <div class="group bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-black/40">
-            <div class="space-y-1">
-                <div class="flex items-center space-x-2">
-                    <h3 class="font-semibold text-sm text-slate-200 group-hover:text-blue-400 transition">DevTools Hub</h3>
-                </div>
-                <p class="text-xs text-slate-400">All-in-one developer & designer utility suite</p>
-            </div>
-            <div class="flex items-center space-x-2">
-                <a href="https://devtools-hub-pro.vercel.app/" target="_blank" class="text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-2 rounded-xl border border-slate-700/50 transition">Demo</a>
-                <a href="https://link.payoneer.com/Token?t=516FFF67BFDD433EB2810604EE6F19EE&src=mobile" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl shadow-lg shadow-blue-600/20 transition">Buy $99</a>
-            </div>
-        </div>
-
-        <!-- Tool 4: StudyMate Student Planner -->
-        <div class="group bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-black/40">
-            <div class="space-y-1">
-                <div class="flex items-center space-x-2">
-                    <h3 class="font-semibold text-sm text-slate-200 group-hover:text-blue-400 transition">StudyMate Student Planner</h3>
-                </div>
-                <p class="text-xs text-slate-400">Smart academic schedule & task tracker</p>
-            </div>
-            <div class="flex items-center space-x-2">
-                <a href="https://studymate-student-planner-ctlw.vercel.app/" target="_blank" class="text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-2 rounded-xl border border-slate-700/50 transition">Demo</a>
-                <a href="https://link.payoneer.com/Token?t=3128A10E961E4C11A96D1589FC704E15&src=mobile" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl shadow-lg shadow-blue-600/20 transition">Buy $49</a>
-            </div>
-        </div>
-
-        <!-- Tool 5: Image Resizer Tool -->
-        <div class="group bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-4 rounded-2xl flex items-center justify-between hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 shadow-xl shadow-black/40">
-            <div class="space-y-1">
-                <div class="flex items-center space-x-2">
-                    <h3 class="font-semibold text-sm text-slate-200 group-hover:text-blue-400 transition">Image Resizer Tool</h3>
-                </div>
-                <p class="text-xs text-slate-400">Client-side lossless compression utility</p>
-            </div>
-            <div class="flex items-center space-x-2">
-                <a href="https://image-resizer-tool-one.vercel.app/" target="_blank" class="text-xs font-medium bg-slate-800/80 hover:bg-slate-800 text-slate-300 px-3 py-2 rounded-xl border border-slate-700/50 transition">Demo</a>
-                <a href="YOUR_IMAGE_RESIZER_PAYONEER_LINK" target="_blank" class="text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl shadow-lg shadow-blue-600/20 transition">Buy $49</a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Custom SaaS / Hire Me Section (Contact Us) -->
-    <div class="max-w-xl w-full mt-8 relative z-10">
-        <div class="bg-gradient-to-r from-blue-900/40 via-slate-900/80 to-indigo-900/40 border border-blue-500/30 p-6 rounded-2xl text-center shadow-2xl relative overflow-hidden">
-            <h2 class="text-lg font-bold text-white mb-1">Need a Custom Web Tool or SaaS Built?</h2>
-            <p class="text-xs text-slate-300 mb-5 max-w-sm mx-auto leading-relaxed">
-                Looking for a custom automation, browser utility, or SaaS MVP for your agency? Let’s build it to match your exact business requirements.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a href="mailto:ahmadmughal@gmail.com?subject=Custom%20Tool%20Development%20Inquiry" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-lg shadow-blue-600/30">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <span>Hire for Custom Tool</span>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/923089423733" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
+                    <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp (+92 3089423733)
                 </a>
-                <a href="https://wa.me/923089423733?text=Hi%20Ahmad,%20I%20want%20to%20discuss%20building%20a%20custom%20tool." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/80 text-xs font-semibold px-4 py-2.5 rounded-xl transition">
-                    <svg class="w-4 h-4 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    <span>Chat on WhatsApp</span>
-                </a>
+                <a href="#tools" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-500 transition">Explore Tools</a>
             </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-14 pb-10 text-center px-4">
+        <span class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold uppercase mb-4">Production-Ready Micro-SaaS</span>
+        <h1 class="text-3xl sm:text-5xl font-black text-white max-w-3xl mx-auto leading-tight">Launch & Self-Host Your Web Utilities Fast</h1>
+        <p class="text-slate-400 max-w-xl mx-auto mt-4 text-sm sm:text-base">High-converting source code, developer tools, and turnkey templates ready for immediate deployment.</p>
+    </section>
+
+    <!-- Top Ad Placement Area -->
+    <div class="max-w-7xl mx-auto my-4 text-center px-4">
+        <!-- AdSense Display Ad Unit -->
+        <div class="p-2 border border-slate-800/60 rounded-lg bg-slate-900/40 min-h-[90px] flex items-center justify-center text-xs text-slate-500">
+            <!-- Replace with AdSense Ins Tag -->
+            <span>[ Ad Placement Header ]</span>
         </div>
     </div>
 
-    <!-- Professional Footer -->
-    <footer class="mt-16 pt-6 border-t border-slate-800/80 max-w-xl w-full text-center text-slate-500 text-xs flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
-        <p>© 2026 Ahmad Mughal. All rights reserved.</p>
-        <div class="flex items-center space-x-4">
-            <span class="hover:text-slate-400 transition cursor-pointer">Secure Payoneer Checkout</span>
-            <span>•</span>
-            <span class="hover:text-slate-400 transition cursor-pointer">Instant Source Delivery</span>
+    <!-- Main Grid -->
+    <main id="tools" class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Tool 1 -->
+            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Flagship</span>
+                        <span class="text-xl font-bold text-white">$299</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">OutreachAI</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">AI cold email engine designed for automated lead prospecting and high conversion.</p>
+                </div>
+                <div class="flex gap-2 pt-3 border-t border-slate-800">
+                    <a href="https://wa.me/923089423733?text=Interested%20in%20OutreachAI" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Get Source Code</a>
+                </div>
+            </div>
+
+            <!-- Tool 2 -->
+            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Popular</span>
+                        <span class="text-xl font-bold text-white">$149</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Agency Proposal Builder</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Professional client proposal & contract generator with instant PDF export capabilities.</p>
+                </div>
+                <div class="flex gap-2 pt-3 border-t border-slate-800">
+                    <a href="https://wa.me/923089423733?text=Interested%20in%20Agency%20Proposal%20Builder" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Get Source Code</a>
+                </div>
+            </div>
+
+            <!-- Tool 3 -->
+            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">Utility Suite</span>
+                        <span class="text-xl font-bold text-white">$99</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">DevTools Hub</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">All-in-one developer suite: JSON formatters, regex tester, CSS generators, and minifiers.</p>
+                </div>
+                <div class="flex gap-2 pt-3 border-t border-slate-800">
+                    <a href="https://wa.me/923089423733?text=Interested%20in%20DevTools%20Hub" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Get Source Code</a>
+                </div>
+            </div>
+
+            <!-- Tool 4 -->
+            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Academic</span>
+                        <span class="text-xl font-bold text-white">$49</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">StudyMate Student Planner</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Smart academic schedule tracker, assignment manager, and exam countdown tool.</p>
+                </div>
+                <div class="flex gap-2 pt-3 border-t border-slate-800">
+                    <a href="https://wa.me/923089423733?text=Interested%20in%20StudyMate" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Get Source Code</a>
+                </div>
+            </div>
+
+            <!-- Tool 5 -->
+            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">Utility</span>
+                        <span class="text-xl font-bold text-white">$49</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1">Image Resizer Tool</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Client-side lossless image compression, crop, and batch resizing web application.</p>
+                </div>
+                <div class="flex gap-2 pt-3 border-t border-slate-800">
+                    <a href="https://wa.me/923089423733?text=Interested%20in%20Image%20Resizer" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Get Source Code</a>
+                </div>
+            </div>
+
+            <!-- Custom Orders -->
+            <div class="bg-gradient-to-br from-blue-900/30 to-brandCard border border-blue-500/30 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 mb-3 inline-block">Bespoke</span>
+                    <h3 class="text-lg font-bold text-white mb-1">Custom Web Tool / Calculator</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-4">Need a specialized material calculator, client portal, or customized SaaS backend?</p>
+                </div>
+                <a href="https://wa.me/923089423733?text=Hi,%20I%20need%20a%20Custom%20Tool" target="_blank" class="w-full text-center py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs">Request Build</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Essential AdSense Text Section (Prevents 'Thin Content' Rejection) -->
+    <section class="max-w-4xl mx-auto px-4 py-12 text-slate-400 text-xs leading-relaxed border-t border-slate-800/60 mt-8">
+        <h2 class="text-base font-bold text-white mb-3">About SaaS Tools Hub</h2>
+        <p class="mb-3">SaaS Tools Hub is a curated platform providing self-hosted micro-SaaS boilerplates, utility web apps, and developer scripts. Designed for indie hackers, web developers, and digital agencies, our templates reduce setup time and allow creators to launch functional web tools instantly.</p>
+        <p>Each tool listed on SaaS Tools Hub includes complete, open-licensed source code built with modern frameworks. Whether you need automated outreach engines, contract generators, or productivity suites, our pre-configured boilerplates ensure reliable performance and effortless deployment.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-black/40 py-8 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <span class="font-bold text-slate-300">SaaS Tools Hub</span> &copy; 2026. All rights reserved.
+            </div>
+            <!-- AdSense Mandatory Legal Links -->
+            <div class="flex gap-4">
+                <button onclick="toggleModal('privacyModal')" class="hover:text-slate-300 underline">Privacy Policy</button>
+                <button onclick="toggleModal('termsModal')" class="hover:text-slate-300 underline">Terms of Service</button>
+                <a href="https://wa.me/923089423733" target="_blank" class="hover:text-slate-300 underline">Contact Us</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brandCard border border-slate-800 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto text-xs text-slate-300">
+            <h3 class="text-lg font-bold text-white mb-3">Privacy Policy</h3>
+            <p class="mb-2">Your privacy is important to us. SaaS Tools Hub does not store personal data or sell personal information to third parties.</p>
+            <p class="mb-2">We use Google AdSense to serve advertisements. Google may use cookies to serve ads based on users' prior visits to our site or other websites.</p>
+            <button onclick="toggleModal('privacyModal')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brandCard border border-slate-800 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto text-xs text-slate-300">
+            <h3 class="text-lg font-bold text-white mb-3">Terms of Service</h3>
+            <p class="mb-2">By accessing SaaS Tools Hub, you agree to use our digital assets and open-license source codes in accordance with local web development laws.</p>
+            <p class="mb-2">All tools provided on this website are distributed as-is without warranties. Digital product sales are delivered directly via contact verification.</p>
+            <button onclick="toggleModal('termsModal')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium">Close</button>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        function toggleModal(id) {
+            document.getElementById(id).classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
