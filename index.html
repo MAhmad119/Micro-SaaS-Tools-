@@ -23,127 +23,129 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-white min-h-screen flex flex-col">
+<body class="bg-brandDark text-slate-100 font-sans antialiased selection:bg-brandAccent selection:text-white min-h-screen flex flex-col justify-between">
 
-    <!-- Navigation Header -->
-    <header class="border-b border-slate-800/80 bg-brandDark/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-lg shadow-lg shadow-blue-500/20">
-                    ⚡
+    <div>
+        <!-- Navigation Header -->
+        <header class="border-b border-slate-800/80 bg-brandDark/80 backdrop-blur-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-lg shadow-lg shadow-blue-500/20">
+                        ⚡
+                    </div>
+                    <span class="font-extrabold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                        SaaS Tools Hub
+                    </span>
                 </div>
-                <span class="font-extrabold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
-                    SaaS Tools Hub
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/923089423733" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-sm font-medium hover:bg-emerald-600/30 transition">
+                        <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Direct
+                    </a>
+                    <a href="#tools" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">
+                        Explore Tools
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-12 overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                    🔥 Production-Ready Micro-SaaS Boilerplates
                 </span>
+                <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+                    Launch Your Digital Empire with <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">Self-Hosted Tools</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Get high-converting source code, fully open-licensed utilities, and ready-to-deploy web apps to monetize instantly.
+                </p>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="https://wa.me/923089423733" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-sm font-medium hover:bg-emerald-600/30 transition">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> WhatsApp Direct
-                </a>
-                <a href="#tools" class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">
-                    Explore Tools
-                </a>
-            </div>
-        </div>
-    </header>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="relative pt-16 pb-12 overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                🔥 Production-Ready Micro-SaaS Boilerplates
-            </span>
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-                Launch Your Digital Empire with <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">Self-Hosted Tools</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Get high-converting source code, fully open-licensed utilities, and ready-to-deploy web apps to monetize instantly.
-            </p>
-        </div>
-    </section>
+        <!-- SaaS Tools Grid -->
+        <main id="tools" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- SaaS Tools Grid -->
-    <main id="tools" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Tool Card 1: OutreachAI -->
-            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Flagship</span>
-                        <span class="text-2xl font-black text-white">$299</span>
+                <!-- Tool Card 1: OutreachAI -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Flagship</span>
+                            <span class="text-2xl font-black text-white">$299</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">OutreachAI</h3>
+                        <p class="text-slate-400 text-sm mb-6">AI-powered cold email engine designed for high prospect conversion rates.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">OutreachAI</h3>
-                    <p class="text-slate-400 text-sm mb-6">AI-powered cold email engine designed for high prospect conversion rates.</p>
-                </div>
-                <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://ai-outreach-web.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
-                    <a href="https://link.payoneer.com/Token?t=BCF33367AACD45248CC2E3D60535E5FA&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $299</a>
-                </div>
-            </div>
-
-            <!-- Tool Card 2: Agency Proposal Builder -->
-            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Popular</span>
-                        <span class="text-2xl font-black text-white">$149</span>
+                    <div class="flex gap-3 pt-4 border-t border-slate-800/80">
+                        <a href="https://ai-outreach-web.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
+                        <a href="https://link.payoneer.com/Token?t=BCF33367AACD45248CC2E3D60535E5FA&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $299</a>
                     </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">Agency Proposal Builder</h3>
-                    <p class="text-slate-400 text-sm mb-6">High-converting client contract & professional proposal generator.</p>
                 </div>
-                <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://agency-proposal-builder.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
-                    <a href="https://link.payoneer.com/Token?t=336317ACB9E74DE6A25C9350A6391816&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $149</a>
-                </div>
-            </div>
 
-            <!-- Tool Card 3: StudyMate Student Planner -->
-            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Academic</span>
-                        <span class="text-2xl font-black text-white">$49</span>
+                <!-- Tool Card 2: Agency Proposal Builder -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Popular</span>
+                            <span class="text-2xl font-black text-white">$149</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">Agency Proposal Builder</h3>
+                        <p class="text-slate-400 text-sm mb-6">High-converting client contract & professional proposal generator.</p>
                     </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">StudyMate Planner</h3>
-                    <p class="text-slate-400 text-sm mb-6">Smart academic scheduling, syllabus progress & task tracking web tool.</p>
-                </div>
-                <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://studymate-student-planner-ctlw.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
-                    <a href="https://link.payoneer.com/Token?t=516FFF67BFDD433EB2810604EE6F19EE&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $49</a>
-                </div>
-            </div>
-
-            <!-- Tool Card 4: Image Resizer Tool (With Payoneer Link Attached) -->
-            <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">Utility</span>
-                        <span class="text-2xl font-black text-white">$49</span>
+                    <div class="flex gap-3 pt-4 border-t border-slate-800/80">
+                        <a href="https://agency-proposal-builder.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
+                        <a href="https://link.payoneer.com/Token?t=336317ACB9E74DE6A25C9350A6391816&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $149</a>
                     </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">Image Resizer Tool</h3>
-                    <p class="text-slate-400 text-sm mb-6">Fast client-side image compression & lossless image editing app.</p>
                 </div>
-                <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://image-resizer-tool-one.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
-                    <a href="https://link.payoneer.com/Token?t=3128A10E961E4C11A96D1589FC704E15&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $49</a>
-                </div>
-            </div>
 
-            <!-- Custom Orders Banner -->
-            <div class="bg-gradient-to-br from-blue-900/40 via-brandCard to-indigo-900/40 border border-blue-500/30 rounded-2xl p-6 flex flex-col justify-between shadow-xl md:col-span-2">
-                <div>
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 mb-4 inline-block">Bespoke Dev</span>
-                    <h3 class="text-xl font-bold text-white mb-2">Custom SaaS Development</h3>
-                    <p class="text-slate-300 text-sm mb-6">Need a custom web tool, specialized calculator, or full Micro-SaaS project built from scratch?</p>
+                <!-- Tool Card 3: StudyMate Student Planner -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">Academic</span>
+                            <span class="text-2xl font-black text-white">$49</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">StudyMate Planner</h3>
+                        <p class="text-slate-400 text-sm mb-6">Smart academic scheduling, syllabus progress & task tracking web tool.</p>
+                    </div>
+                    <div class="flex gap-3 pt-4 border-t border-slate-800/80">
+                        <a href="https://studymate-student-planner-ctlw.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
+                        <a href="https://link.payoneer.com/Token?t=516FFF67BFDD433EB2810604EE6F19EE&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $49</a>
+                    </div>
                 </div>
-                <a href="https://wa.me/923089423733?text=Hi,%20I%20need%20a%20Custom%20Web%20Tool" target="_blank" class="w-full text-center px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-500/20">
-                    Contact via WhatsApp
-                </a>
-            </div>
 
-        </div>
-    </main>
+                <!-- Tool Card 4: Image Resizer Tool -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition group shadow-xl">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">Utility</span>
+                            <span class="text-2xl font-black text-white">$49</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2">Image Resizer Tool</h3>
+                        <p class="text-slate-400 text-sm mb-6">Fast client-side image compression & lossless image editing app.</p>
+                    </div>
+                    <div class="flex gap-3 pt-4 border-t border-slate-800/80">
+                        <a href="https://image-resizer-tool-one.vercel.app/" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl border border-slate-700 text-slate-300 font-medium text-sm hover:bg-slate-800 transition">Demo</a>
+                        <a href="https://link.payoneer.com/Token?t=3128A10E961E4C11A96D1589FC704E15&src=mobile" target="_blank" class="flex-1 text-center px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-md shadow-blue-600/20">Buy $49</a>
+                    </div>
+                </div>
+
+                <!-- Custom Orders Banner -->
+                <div class="bg-gradient-to-br from-blue-900/40 via-brandCard to-indigo-900/40 border border-blue-500/30 rounded-2xl p-6 flex flex-col justify-between shadow-xl md:col-span-2">
+                    <div>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 mb-4 inline-block">Bespoke Dev</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Custom SaaS Development</h3>
+                        <p class="text-slate-300 text-sm mb-6">Need a custom web tool, specialized calculator, or full Micro-SaaS project built from scratch?</p>
+                    </div>
+                    <a href="https://wa.me/923089423733?text=Hi,%20I%20need%20a%20Custom%20Web%20Tool" target="_blank" class="w-full text-center px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-500/20">
+                        Contact via WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
 
     <!-- Legal & AdSense Ready Footer -->
     <footer class="border-t border-slate-800 bg-brandDark py-10 mt-16 text-slate-400 text-sm">
@@ -154,9 +156,9 @@
                     <p class="text-xs text-slate-500 mt-1">Direct source code sales & self-hosted web utilities.</p>
                 </div>
                 <div class="flex flex-wrap gap-6 text-xs font-medium">
-                    <a href="#" class="hover:text-white transition">About Us</a>
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                    <button onclick="toggleModal('aboutModal')" class="hover:text-white transition cursor-pointer">About Us</button>
+                    <button onclick="toggleModal('privacyModal')" class="hover:text-white transition cursor-pointer">Privacy Policy</button>
+                    <button onclick="toggleModal('termsModal')" class="hover:text-white transition cursor-pointer">Terms & Conditions</button>
                     <a href="https://wa.me/923089423733" target="_blank" class="hover:text-emerald-400 transition">Contact Us (+92 3089423733)</a>
                 </div>
             </div>
@@ -166,8 +168,44 @@
         </div>
     </footer>
 
+    <!-- About Us Modal -->
+    <div id="aboutModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brandCard border border-slate-800 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto text-xs text-slate-300">
+            <h3 class="text-lg font-bold text-white mb-3">About SaaS Tools Hub</h3>
+            <p class="mb-2">SaaS Tools Hub is a curated platform providing self-hosted micro-SaaS boilerplates, utility web apps, and developer scripts.</p>
+            <p class="mb-2">Designed for indie hackers and developers, our templates reduce setup time and allow creators to launch functional web tools instantly.</p>
+            <button onclick="toggleModal('aboutModal')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium cursor-pointer">Close</button>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brandCard border border-slate-800 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto text-xs text-slate-300">
+            <h3 class="text-lg font-bold text-white mb-3">Privacy Policy</h3>
+            <p class="mb-2">Your privacy is important to us. SaaS Tools Hub does not store personal data or sell personal information to third parties.</p>
+            <p class="mb-2">We use cookies and Google AdSense to serve advertisements based on users' prior visits to our site.</p>
+            <button onclick="toggleModal('privacyModal')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium cursor-pointer">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-brandCard border border-slate-800 max-w-lg w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto text-xs text-slate-300">
+            <h3 class="text-lg font-bold text-white mb-3">Terms & Conditions</h3>
+            <p class="mb-2">By accessing SaaS Tools Hub, you agree to use our digital assets and open-license source codes in accordance with standard web development guidelines.</p>
+            <p class="mb-2">All tools provided on this website are distributed as-is. Digital product sales are processed securely via verified links.</p>
+            <button onclick="toggleModal('termsModal')" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium cursor-pointer">Close</button>
+        </div>
+    </div>
+
     <script>
         lucide.createIcons();
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.toggle('hidden');
+            }
+        }
     </script>
 </body>
 </html>
