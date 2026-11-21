@@ -4,611 +4,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AHMAD BUILDS — Premium collection of productivity, business and construction tools. Explore demos and purchase individual tools or the complete bundle.">
+<meta name="description" content="AHMAD BUILDS - Professional digital tools for business, construction and productivity.">
 <meta name="theme-color" content="#090d18">
-<title>AHMAD BUILDS | Premium Digital Tools</title>
+<title>AHMAD BUILDS | Digital Tools</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
- --bg:#090d18;
- --surface:#101827;
- --surface2:#141f30;
- --border:#243147;
- --text:#f5f7fc;
- --muted:#99a6ba;
- --blue:#5c8dff;
- --cyan:#55d6e8;
- --gold:#e9b66e;
- --green:#5bd6a0;
- --shadow:0 20px 65px rgba(0,0,0,.28);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
- background:var(--bg);
- color:var(--text);
- font-family:"DM Sans",sans-serif;
- line-height:1.6;
- overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-.container{width:min(1160px,91%);margin:auto}
-.announcement{
- text-align:center;
- padding:9px 12px;
- background:#14223a;
- border-bottom:1px solid var(--border);
- color:#c6d7f5;
- font-size:11px;
- letter-spacing:.08em;
-}
-.navbar{
- position:sticky;
- top:0;
- z-index:100;
- background:rgba(9,13,24,.91);
- backdrop-filter:blur(18px);
- border-bottom:1px solid rgba(255,255,255,.07);
-}
-.nav-inner{
- height:76px;
- display:flex;
- justify-content:space-between;
- align-items:center;
-}
-.logo{
- display:flex;
- align-items:center;
- gap:11px;
- font:800 19px Manrope,sans-serif;
- letter-spacing:-.8px;
-}
-.logo-mark{
- width:38px;
- height:38px;
- display:grid;
- place-items:center;
- border:1px solid #6a91e9;
- border-radius:10px;
- color:white;
- background:#172747;
- font-size:13px;
- box-shadow:0 0 22px #5c8dff25;
-}
-.logo span:last-child{color:var(--blue)}
-.nav-links{display:flex;gap:27px;align-items:center}
-.nav-links a{
- color:var(--muted);
- font-size:12px;
- font-weight:600;
- transition:.2s;
-}
-.nav-links a:hover{color:white}
-.nav-cta{
- padding:10px 17px;
- background:var(--blue);
- border-radius:7px;
- color:white!important;
-}
-.menu-btn{
- display:none;
- border:1px solid var(--border);
- color:white;
- background:var(--surface);
- padding:8px 12px;
- border-radius:7px;
-}
-.hero{
- min-height:590px;
- display:flex;
- align-items:center;
- position:relative;
- overflow:hidden;
- border-bottom:1px solid var(--border);
-}
-.hero:before{
- content:"";
- position:absolute;
- width:650px;
- height:650px;
- border-radius:50%;
- background:#3568db20;
- filter:blur(90px);
- right:-150px;
- top:-140px;
-}
-.hero:after{
- content:"";
- position:absolute;
- width:450px;
- height:450px;
- border-radius:50%;
- background:#1c9db51b;
- filter:blur(90px);
- left:-180px;
- bottom:-220px;
-}
-.hero-content{position:relative;z-index:2;padding:90px 0}
-.eyebrow{
- display:inline-flex;
- align-items:center;
- gap:9px;
- color:#9bb8ff;
- font-size:10px;
- letter-spacing:.2em;
- font-weight:800;
- text-transform:uppercase;
-}
-.eyebrow:before{
- content:"";
- width:23px;
- height:1px;
- background:var(--blue);
-}
-.hero h1{
- font:800 clamp(43px,7vw,78px)/1.08 Manrope,sans-serif;
- letter-spacing:-4px;
- max-width:850px;
- margin:23px 0;
-}
-.gradient-text{
- color:#83aaff;
-}
-.hero p{
- max-width:620px;
- color:var(--muted);
- font-size:15px;
- line-height:1.9;
-}
-.hero-actions{
- display:flex;
- gap:13px;
- flex-wrap:wrap;
- margin-top:32px;
-}
-.btn{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- gap:9px;
- border-radius:8px;
- padding:13px 19px;
- font-size:12px;
- font-weight:800;
- transition:.22s;
- border:1px solid transparent;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{
- background:var(--blue);
- color:white;
- box-shadow:0 9px 26px #4779e82b;
-}
-.btn-primary:hover{background:#76a0ff}
-.btn-outline{
- border-color:var(--border);
- color:white;
- background:#ffffff06;
-}
-.btn-outline:hover{border-color:#668de0;background:#182641}
-.hero-stats{
- display:flex;
- gap:38px;
- margin-top:58px;
- padding-top:25px;
- border-top:1px solid var(--border);
- max-width:570px;
-}
-.hero-stat strong{
- display:block;
- font:800 23px Manrope;
-}
-.hero-stat span{
- font-size:10px;
- color:var(--muted);
- letter-spacing:.1em;
- text-transform:uppercase;
-}
-.section{padding:90px 0}
-.section-head{
- display:flex;
- justify-content:space-between;
- align-items:end;
- gap:25px;
- margin-bottom:35px;
-}
-.section-head h2{
- font:800 clamp(29px,4vw,43px) Manrope;
- letter-spacing:-1.8px;
- margin-top:12px;
-}
-.section-head p{
- max-width:390px;
- font-size:12px;
- color:var(--muted);
- line-height:1.8;
-}
-.tool-count{
- display:inline-flex;
- padding:7px 12px;
- border:1px solid var(--border);
- border-radius:30px;
- color:#b9c8e4;
- font-size:10px;
- white-space:nowrap;
-}
-.tools-grid{
- display:grid;
- grid-template-columns:repeat(3,minmax(0,1fr));
- gap:19px;
-}
-.tool-card{
- background:linear-gradient(145deg,#121d2d,#0e1623);
- border:1px solid var(--border);
- border-radius:13px;
- padding:23px;
- display:flex;
- flex-direction:column;
- min-height:335px;
- position:relative;
- overflow:hidden;
- transition:.25s;
-}
-.tool-card:before{
- content:"";
- position:absolute;
- width:170px;
- height:170px;
- border-radius:50%;
- background:#4779e80c;
- right:-75px;
- top:-75px;
-}
-.tool-card:hover{
- transform:translateY(-6px);
- border-color:#587bc3;
- box-shadow:var(--shadow);
-}
-.tool-top{
- display:flex;
- justify-content:space-between;
- align-items:center;
- position:relative;
-}
-.tool-icon{
- width:51px;
- height:51px;
- display:grid;
- place-items:center;
- border-radius:12px;
- font-size:23px;
- background:#1b2b49;
- border:1px solid #344b73;
-}
-.tool-tag{
- font-size:9px;
- letter-spacing:.1em;
- color:#9db9ff;
- background:#1b2b49;
- border:1px solid #2b4269;
- border-radius:30px;
- padding:6px 9px;
- font-weight:800;
- text-transform:uppercase;
-}
-.tool-card h3{
- font:800 19px Manrope;
- margin:24px 0 9px;
- position:relative;
-}
-.tool-card p{
- color:var(--muted);
- font-size:12px;
- line-height:1.8;
- flex:1;
-}
-.tool-bottom{
- display:flex;
- justify-content:space-between;
- align-items:center;
- border-top:1px solid var(--border);
- padding-top:17px;
- margin-top:23px;
- gap:10px;
-}
-.price{
- font:800 25px Manrope;
- letter-spacing:-1px;
-}
-.price small{
- display:block;
- font:600 9px "DM Sans";
- color:var(--muted);
- letter-spacing:.12em;
-}
-.tool-actions{
- display:flex;
- gap:7px;
- flex-wrap:wrap;
-}
-.tool-actions .btn{
- padding:10px 12px;
- font-size:10px;
-}
-.demo-btn{
- background:#1a2639;
- border:1px solid #34445d;
- color:#e6edfa;
-}
-.buy-btn{
- background:var(--blue);
- color:white;
-}
-.bundle-section{
- padding:35px 0 95px;
-}
-.bundle{
- position:relative;
- overflow:hidden;
- border:1px solid #4b6090;
- border-radius:17px;
- padding:45px;
- background:linear-gradient(115deg,#14213a,#101a2b 65%,#172849);
- display:grid;
- grid-template-columns:1.2fr .8fr;
- gap:25px;
- align-items:center;
-}
-.bundle:after{
- content:"";
- position:absolute;
- width:350px;
- height:350px;
- border-radius:50%;
- background:#5c8dff18;
- filter:blur(70px);
- right:-80px;
- top:-160px;
-}
-.bundle-content,.bundle-price{position:relative;z-index:2}
-.bundle h2{
- font:800 clamp(29px,4vw,43px) Manrope;
- letter-spacing:-1.5px;
- margin:14px 0;
-}
-.bundle p{
- color:#aebbd0;
- font-size:12px;
- line-height:1.9;
- max-width:550px;
-}
-.bundle-list{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:10px;
- margin-top:24px;
-}
-.bundle-list span{
- color:#d7e1f3;
- font-size:11px;
-}
-.bundle-list span:before{
- content:"✓";
- color:var(--green);
- margin-right:8px;
- font-weight:800;
-}
-.bundle-price{
- text-align:center;
- padding:25px;
- border:1px solid #536b9a;
- border-radius:12px;
- background:#0b1425a8;
-}
-.bundle-price small{
- color:#aabbd8;
- font-size:10px;
- letter-spacing:.15em;
-}
-.bundle-price strong{
- display:block;
- font:800 54px Manrope;
- margin:6px 0;
-}
-.bundle-price p{font-size:10px;margin:0 auto 17px}
-.bundle-price .btn{width:100%}
-.coming{
- display:inline-block;
- margin-top:12px;
- color:#e7bd7e;
- font-size:9px;
- letter-spacing:.12em;
- font-weight:800;
-}
-.features{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:17px;
-}
-.feature{
- padding:24px;
- border:1px solid var(--border);
- border-radius:11px;
- background:var(--surface);
-}
-.feature-icon{font-size:23px}
-.feature h3{font:700 15px Manrope;margin:14px 0 7px}
-.feature p{font-size:11px;color:var(--muted);line-height:1.8}
-.contact{
- padding:60px 0;
- background:#101a29;
- border-top:1px solid var(--border);
- border-bottom:1px solid var(--border);
-}
-.contact-inner{
- display:flex;
- justify-content:space-between;
- align-items:center;
- gap:25px;
-}
-.contact h2{
- font:800 32px Manrope;
- letter-spacing:-1px;
- margin:10px 0;
-}
-.contact p{font-size:12px;color:var(--muted)}
-.whatsapp{background:#178b61;color:white}
-.footer{
- padding:55px 0 25px;
- background:#070b13;
-}
-.footer-grid{
- display:grid;
- grid-template-columns:1.4fr 1fr 1fr;
- gap:35px;
- padding-bottom:35px;
-}
-.footer-brand p{
- max-width:330px;
- margin-top:15px;
- color:var(--muted);
- font-size:11px;
- line-height:1.9;
-}
-.footer h4{
- font:700 12px Manrope;
- margin-bottom:15px;
-}
-.footer-links{
- display:grid;
- gap:11px;
-}
-.footer-links a{
- color:var(--muted);
- font-size:11px;
-}
-.footer-links a:hover{color:white}
-.footer-bottom{
- border-top:1px solid #202b3c;
- padding-top:20px;
- display:flex;
- justify-content:space-between;
- gap:15px;
- flex-wrap:wrap;
- color:#78869a;
- font-size:10px;
-}
-.modal{
- display:none;
- position:fixed;
- inset:0;
- z-index:500;
- background:#000b;
- padding:20px;
- align-items:center;
- justify-content:center;
-}
-.modal.show{display:flex}
-.modal-box{
- width:min(650px,100%);
- max-height:85vh;
- overflow:auto;
- background:#111b2a;
- border:1px solid #354761;
- border-radius:13px;
- padding:27px;
-}
-.modal-head{
- display:flex;
- justify-content:space-between;
- align-items:center;
- margin-bottom:20px;
-}
-.modal-head h2{font:800 21px Manrope}
-.close{
- background:#1b293b;
- color:white;
- border:1px solid var(--border);
- border-radius:7px;
- padding:7px 11px;
-}
-.modal-content h3{font:700 14px Manrope;margin:18px 0 7px}
-.modal-content p,.modal-content li{
- color:#aab6c8;
- font-size:12px;
- line-height:1.9;
- margin-bottom:10px;
-}
-.modal-content ul{padding-left:20px}
-.ad-slot{
- min-height:100px;
- margin:28px auto;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center;
- border:1px dashed #35435a;
- border-radius:9px;
- background:#101827;
- color:#687990;
- font-size:10px;
- letter-spacing:.12em;
-}
-.notice{
- border-left:3px solid var(--gold);
- padding:12px 15px;
- background:#1a2636;
- color:#b8c5d7;
- font-size:11px;
- line-height:1.8;
- margin-top:18px;
-}
-@media(max-width:900px){
- .tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .bundle{grid-template-columns:1fr}
- .bundle-price{max-width:350px}
- .footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:650px){
- .nav-inner{height:67px}
- .menu-btn{display:block}
- .nav-links{
-  display:none;
-  position:absolute;
-  top:67px;
-  left:0;
-  right:0;
-  background:#0c1421;
+:root {
+  --bg:#090d18;
+  --surface:#101827;
+  --surface2:#141f30;
+  --border:#243147;
+  --text:#f5f7fc;
+  --muted:#99a6ba;
+  --blue:#5c8dff;
+  --green:#5bd6a0;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  background:var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.6;
+}
+a {text-decoration:none;color:inherit}
+button {font:inherit;cursor:pointer}
+.container {width:min(1160px,91%);margin:auto}
+
+.announcement {
+  text-align:center;padding:9px;
+  background:#14223a;color:#c6d7f5;
   border-bottom:1px solid var(--border);
-  padding:18px 5%;
-  flex-direction:column;
-  align-items:stretch;
-  gap:18px;
- }
- .nav-links.open{display:flex}
- .nav-links a{font-size:13px}
- .hero{min-height:570px}
- .hero-content{padding:75px 0}
- .hero h1{letter-spacing:-2.5px}
- .hero-stats{gap:18px;justify-content:space-between}
- .hero-stat strong{font-size:19px}
- .section{padding:65px 0}
- .section-head{display:block}
- .section-head p{margin-top:15px}
- .tools-grid{grid-template-columns:1fr}
- .tool-card{min-height:310px}
- .bundle{padding:27px 20px}
- .bundle-list{grid-template-columns:1fr}
- .bundle-price{max-width:none}
- .features{grid-template-columns:1fr}
- .contact-inner{align-items:flex-start;flex-direction:column}
- .footer-grid{grid-template-columns:1fr}
- .footer-bottom{display:block;line-height:2}
+  font-size:11px;letter-spacing:.08em;
+}
+.navbar {
+  position:sticky;top:0;z-index:100;
+  background:#090d18ee;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner {
+  height:76px;display:flex;
+  justify-content:space-between;align-items:center;
+}
+.logo {
+  display:flex;align-items:center;gap:11px;
+  font:800 19px Manrope;
+}
+.logo-mark {
+  width:40px;height:40px;display:grid;
+  place-items:center;border:1px solid #6a91e9;
+  border-radius:10px;background:#172747;
+}
+.logo-name {color:var(--blue)}
+.nav-links {display:flex;gap:25px;align-items:center}
+.nav-links a {font-size:12px;color:var(--muted);font-weight:700}
+.nav-links a:hover {color:white}
+.nav-cta {
+  background:var(--blue);padding:10px 15px;
+  border-radius:7px;color:white!important;
+}
+.menu-btn {
+  display:none;background:var(--surface);
+  color:white;border:1px solid var(--border);
+  padding:9px 13px;border-radius:8px;
+}
+
+.hero {
+  min-height:560px;display:flex;align-items:center;
+  border-bottom:1px solid var(--border);
+  background:radial-gradient(ellipse at 80% 20%,#3568db25,transparent 45%);
+}
+.hero-content {padding:85px 0}
+.eyebrow {
+  color:#9bb8ff;font-size:10px;
+  letter-spacing:.2em;font-weight:800;
+}
+.hero h1 {
+  font:800 clamp(43px,7vw,76px)/1.1 Manrope;
+  letter-spacing:-3px;margin:22px 0;
+}
+.gradient-text {color:#83aaff}
+.hero p {
+  max-width:620px;color:var(--muted);
+  font-size:15px;line-height:1.9;
+}
+.hero-actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn {
+  display:inline-flex;align-items:center;justify-content:center;
+  border-radius:8px;padding:12px 17px;
+  font-size:11px;font-weight:800;
+  border:1px solid transparent;transition:.2s;
+}
+.btn:hover {transform:translateY(-2px)}
+.btn-primary {background:var(--blue);color:white}
+.btn-outline {border-color:var(--border);color:white;background:#ffffff06}
+.hero-stats {
+  display:flex;gap:38px;margin-top:50px;
+  padding-top:22px;border-top:1px solid var(--border);
+  max-width:570px;
+}
+.hero-stat strong {display:block;font:800 23px Manrope}
+.hero-stat span {
+  font-size:10px;color:var(--muted);
+  letter-spacing:.1em;text-transform:uppercase;
+}
+
+.section {padding:85px 0}
+.section-head {
+  display:flex;justify-content:space-between;
+  align-items:end;gap:25px;margin-bottom:35px;
+}
+.section-head h2 {
+  font:800 clamp(28px,4vw,42px) Manrope;
+  letter-spacing:-1.5px;margin-top:12px;
+}
+.section-head p {max-width:390px;font-size:12px;color:var(--muted)}
+.tool-count {
+  border:1px solid var(--border);border-radius:30px;
+  padding:7px 12px;font-size:10px;color:#b9c8e4;
+}
+.tools-grid {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:19px;
+}
+.tool-card {
+  background:linear-gradient(145deg,#121d2d,#0e1623);
+  border:1px solid var(--border);border-radius:13px;
+  padding:23px;display:flex;flex-direction:column;
+  min-height:330px;transition:.25s;
+}
+.tool-card:hover {
+  transform:translateY(-5px);border-color:#587bc3;
+  box-shadow:0 20px 55px #0005;
+}
+.tool-top {display:flex;justify-content:space-between;align-items:center}
+.tool-icon {
+  width:51px;height:51px;display:grid;place-items:center;
+  border-radius:12px;font-size:23px;
+  background:#1b2b49;border:1px solid #344b73;
+}
+.tool-tag {
+  font-size:9px;letter-spacing:.1em;color:#9db9ff;
+  background:#1b2b49;border:1px solid #2b4269;
+  border-radius:30px;padding:6px 9px;font-weight:800;
+}
+.tool-card h3 {font:800 19px Manrope;margin:24px 0 9px}
+.tool-card p {color:var(--muted);font-size:12px;line-height:1.8;flex:1}
+.tool-bottom {
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--border);
+  padding-top:17px;margin-top:23px;gap:10px;
+}
+.price {font:800 25px Manrope}
+.price small {
+  display:block;font:600 9px "DM Sans";
+  color:var(--muted);letter-spacing:.12em;
+}
+.tool-actions {display:flex;gap:7px;flex-wrap:wrap}
+.tool-actions .btn {padding:10px 11px;font-size:10px}
+.demo-btn {background:#1a2639;border:1px solid #34445d;color:white}
+.buy-btn {background:var(--blue);color:white}
+
+.ad-slot {
+  min-height:100px;margin:28px auto;
+  display:flex;align-items:center;justify-content:center;
+  border:1px dashed #35435a;border-radius:9px;
+  color:#687990;font-size:10px;letter-spacing:.12em;
+}
+
+.bundle-section {padding:30px 0 90px}
+.bundle {
+  border:1px solid #4b6090;border-radius:17px;
+  padding:40px;background:linear-gradient(115deg,#14213a,#101a2b);
+  display:grid;grid-template-columns:1.2fr .8fr;gap:25px;
+  align-items:center;
+}
+.bundle h2 {font:800 clamp(29px,4vw,43px) Manrope;margin:14px 0}
+.bundle p {color:#aebbd0;font-size:12px;line-height:1.9}
+.bundle-list {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;margin-top:22px;
+}
+.bundle-list span {font-size:11px;color:#d7e1f3}
+.bundle-list span:before {content:"✓ ";color:var(--green)}
+.bundle-price {
+  text-align:center;padding:25px;
+  border:1px solid #536b9a;border-radius:12px;
+  background:#0b1425a8;
+}
+.bundle-price small {color:#aabbd8;font-size:10px}
+.bundle-price strong {display:block;font:800 48px Manrope}
+.bundle-price p {margin:8px 0 15px}
+
+.features {display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.feature {
+  padding:24px;border:1px solid var(--border);
+  border-radius:11px;background:var(--surface);
+}
+.feature-icon {font-size:23px}
+.feature h3 {font:700 15px Manrope;margin:14px 0 7px}
+.feature p {font-size:11px;color:var(--muted)}
+
+.contact {
+  padding:55px 0;background:#101a29;
+  border-block:1px solid var(--border);
+}
+.contact-inner {
+  display:flex;justify-content:space-between;
+  align-items:center;gap:25px;
+}
+.contact h2 {font:800 32px Manrope;margin:10px 0}
+.contact p {font-size:12px;color:var(--muted)}
+.whatsapp {background:#178b61;color:white}
+
+.footer {padding:50px 0 25px;background:#070b13}
+.footer-grid {
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;
+  gap:35px;padding-bottom:35px;
+}
+.footer-brand p {
+  max-width:330px;margin-top:15px;
+  color:var(--muted);font-size:11px;
+}
+.footer h4 {font:700 12px Manrope;margin-bottom:15px}
+.footer-links {display:grid;gap:11px}
+.footer-links a {color:var(--muted);font-size:11px}
+.footer-links a:hover {color:white}
+.footer-bottom {
+  border-top:1px solid #202b3c;padding-top:20px;
+  display:flex;justify-content:space-between;
+  color:#78869a;font-size:10px;gap:15px;
+}
+
+.modal {
+  display:none;position:fixed;inset:0;z-index:500;
+  background:#000b;padding:20px;
+  align-items:center;justify-content:center;
+}
+.modal.show {display:flex}
+.modal-box {
+  width:min(650px,100%);max-height:85vh;overflow:auto;
+  background:#111b2a;border:1px solid #354761;
+  border-radius:13px;padding:27px;
+}
+.modal-head {
+  display:flex;justify-content:space-between;
+  align-items:center;margin-bottom:20px;
+}
+.modal-head h2 {font:800 21px Manrope}
+.close {
+  background:#1b293b;color:white;
+  border:1px solid var(--border);border-radius:7px;padding:7px 11px;
+}
+.modal-content h3 {font:700 14px Manrope;margin:18px 0 7px}
+.modal-content p {
+  color:#aab6c8;font-size:12px;line-height:1.9;margin-bottom:10px;
+}
+
+@media(max-width:900px) {
+  .tools-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bundle {grid-template-columns:1fr}
+  .features {grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px) {
+  .nav-inner {height:67px}
+  .menu-btn {display:block}
+  .nav-links {
+    display:none;position:absolute;top:67px;left:0;right:0;
+    background:#0c1421;border-bottom:1px solid var(--border);
+    padding:18px 5%;flex-direction:column;align-items:stretch;
+  }
+  .nav-links.open {display:flex}
+  .hero {min-height:540px}
+  .hero-content {padding:70px 0}
+  .hero h1 {letter-spacing:-2px}
+  .hero-stats {gap:18px;justify-content:space-between}
+  .hero-stat strong {font-size:19px}
+  .section {padding:60px 0}
+  .section-head {display:block}
+  .section-head p {margin-top:15px}
+  .tools-grid,.features,.footer-grid {grid-template-columns:1fr}
+  .tool-card {min-height:300px}
+  .tool-bottom {align-items:flex-start;flex-direction:column}
+  .bundle {padding:25px 20px}
+  .bundle-list {grid-template-columns:1fr}
+  .contact-inner {align-items:flex-start;flex-direction:column}
+  .footer-bottom {display:block;line-height:2}
 }
 </style>
 </head>
@@ -616,420 +301,353 @@ button{font:inherit;cursor:pointer}
 <body>
 
 <div class="announcement">
- PREMIUM DIGITAL PRODUCTS &nbsp; · &nbsp; BUILT FOR BUSINESS, PRODUCTIVITY & CREATIVITY
+ PREMIUM DIGITAL PRODUCTS · BUILT FOR BUSINESS & PRODUCTIVITY
 </div>
 
 <header class="navbar">
- <div class="container nav-inner">
-  <a class="logo" href="#home">
-   <span class="logo-mark">AB</span>
-   <span>AHMAD <span>BUILDS</span></span>
-  </a>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">
+      <span class="logo-mark">AB</span>
+      <span>AHMAD <span class="logo-name">BUILDS</span></span>
+    </a>
 
-  <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
 
-  <nav class="nav-links" id="navLinks">
-   <a href="#home">Home</a>
-   <a href="#tools">Explore Tools</a>
-   <a href="#bundle">Bundle Deal</a>
-   <a href="#about">About</a>
-   <a href="#contact">Contact</a>
-   <a class="nav-cta" href="#tools">Explore Marketplace ↗</a>
-  </nav>
- </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#tools">Explore Tools</a>
+      <a href="#bundle">Bundle</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#tools">Explore Marketplace ↗</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
 <section class="hero" id="home">
- <div class="container hero-content">
-  <div class="eyebrow">INDEPENDENT DIGITAL PRODUCT STUDIO</div>
-  <h1>Powerful tools.<br><span class="gradient-text">Smarter work.</span><br>One marketplace.</h1>
-  <p>
-   Discover a curated collection of practical digital tools designed
-   to simplify business workflows, construction planning, image tasks
-   and everyday productivity.
-  </p>
+  <div class="container hero-content">
+    <div class="eyebrow">INDEPENDENT DIGITAL PRODUCT STUDIO</div>
+    <h1>Powerful tools.<br><span class="gradient-text">Smarter work.</span><br>One marketplace.</h1>
+    <p>
+      Discover practical digital tools designed to simplify business
+      workflows, construction planning, image tasks and everyday productivity.
+    </p>
 
-  <div class="hero-actions">
-   <a class="btn btn-primary" href="#tools">EXPLORE ALL TOOLS ↗</a>
-   <a class="btn btn-outline" href="#bundle">VIEW COMPLETE BUNDLE</a>
-  </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#tools">EXPLORE ALL TOOLS ↗</a>
+      <a class="btn btn-outline" href="#bundle">VIEW COMPLETE BUNDLE</a>
+    </div>
 
-  <div class="hero-stats">
-   <div class="hero-stat"><strong>05</strong><span>Digital tools</span></div>
-   <div class="hero-stat"><strong>04</strong><span>Categories</span></div>
-   <div class="hero-stat"><strong>$25+</strong><span>Starting price</span></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>05</strong><span>Digital tools</span></div>
+      <div class="hero-stat"><strong>04</strong><span>Categories</span></div>
+      <div class="hero-stat"><strong>$25+</strong><span>Starting price</span></div>
+    </div>
   </div>
- </div>
 </section>
 
 <section class="section" id="tools">
- <div class="container">
-  <div class="section-head">
-   <div>
-    <div class="eyebrow">THE PRODUCT COLLECTION</div>
-    <h2>Explore our digital tools.</h2>
-   </div>
-   <span class="tool-count">05 PRODUCTS AVAILABLE</span>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">THE PRODUCT COLLECTION</div>
+        <h2>Explore our digital tools.</h2>
+      </div>
+      <span class="tool-count">05 PRODUCTS AVAILABLE</span>
+    </div>
+
+    <div class="tools-grid">
+
+      <article class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">✉️</div>
+          <span class="tool-tag">Business</span>
+        </div>
+        <h3>Outreach AI</h3>
+        <p>An AI-powered outreach workspace designed to help users create professional business outreach messages and communication drafts.</p>
+        <div class="tool-bottom">
+          <div class="price">$299<small>ONE-TIME PRICE</small></div>
+          <div class="tool-actions">
+            <a class="btn demo-btn" href="https://ai-outreach-web.vercel.app/" target="_blank" rel="noopener">DEMO ↗</a>
+            <a class="btn buy-btn" href="https://wa.me/923089423733?text=Hi%20AHMAD%20BUILDS%2C%20I%20am%20interested%20in%20Outreach%20AI.%20Please%20share%20purchase%20details." target="_blank" rel="noopener">REQUEST TO BUY ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">🏗️</div>
+          <span class="tool-tag">Construction</span>
+        </div>
+        <h3>BuildCalc Pro</h3>
+        <p>A construction planning and estimation workspace for dimensions, material quantities, editable rates and preliminary project budgeting.</p>
+        <div class="tool-bottom">
+          <div class="price">$150<small>ONE-TIME PRICE</small></div>
+          <div class="tool-actions">
+            <a class="btn demo-btn" href="https://buildcalc-pro-pz6x.vercel.app" target="_blank" rel="noopener">DEMO ↗</a>
+            <a class="btn buy-btn" href="https://wa.me/923089423733?text=Hi%20AHMAD%20BUILDS%2C%20I%20am%20interested%20in%20BuildCalc%20Pro.%20Please%20share%20purchase%20details." target="_blank" rel="noopener">REQUEST TO BUY ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">📑</div>
+          <span class="tool-tag">Agency</span>
+        </div>
+        <h3>Agency Proposal Builder</h3>
+        <p>A proposal-building tool for preparing and presenting structured agency project proposals and client-facing documents.</p>
+        <div class="tool-bottom">
+          <div class="price">$99<small>ONE-TIME PRICE</small></div>
+          <div class="tool-actions">
+            <a class="btn demo-btn" href="https://agency-proposal-builder.vercel.app/" target="_blank" rel="noopener">DEMO ↗</a>
+            <a class="btn buy-btn" href="https://wa.me/923089423733?text=Hi%20AHMAD%20BUILDS%2C%20I%20am%20interested%20in%20Agency%20Proposal%20Builder.%20Please%20share%20purchase%20details." target="_blank" rel="noopener">REQUEST TO BUY ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">🖼️</div>
+          <span class="tool-tag">Image Utility</span>
+        </div>
+        <h3>Image Resizer Tool</h3>
+        <p>A simple image utility for resizing images to more convenient dimensions for digital projects and everyday use.</p>
+        <div class="tool-bottom">
+          <div class="price">$49<small>ONE-TIME PRICE</small></div>
+          <div class="tool-actions">
+            <a class="btn demo-btn" href="https://image-resizer-tool-one.vercel.app/" target="_blank" rel="noopener">DEMO ↗</a>
+            <a class="btn buy-btn" href="https://wa.me/923089423733?text=Hi%20AHMAD%20BUILDS%2C%20I%20am%20interested%20in%20Image%20Resizer%20Tool.%20Please%20share%20purchase%20details." target="_blank" rel="noopener">REQUEST TO BUY ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">📚</div>
+          <span class="tool-tag">Productivity</span>
+        </div>
+        <h3>Study Mate Planner</h3>
+        <p>A student planning workspace designed to organize study activities, academic tasks and everyday learning schedules.</p>
+        <div class="tool-bottom">
+          <div class="price">$25<small>ONE-TIME PRICE</small></div>
+          <div class="tool-actions">
+            <a class="btn demo-btn" href="https://studymate-student-planner-ctlw.vercel.app/" target="_blank" rel="noopener">DEMO ↗</a>
+            <a class="btn buy-btn" href="https://wa.me/923089423733?text=Hi%20AHMAD%20BUILDS%2C%20I%20am%20interested%20in%20Study%20Mate%20Planner.%20Please%20share%20purchase%20details." target="_blank" rel="noopener">REQUEST TO BUY ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ad-slot">ADVERTISEMENT SPACE</div>
   </div>
-
-  <div class="tools-grid">
-
-   <!-- TOOL 1 -->
-   <article class="tool-card">
-    <div class="tool-top">
-     <div class="tool-icon">✉️</div>
-     <span class="tool-tag">Business</span>
-    </div>
-    <h3>Outreach AI</h3>
-    <p>
-     An AI-powered outreach workspace designed to help users
-     create professional business outreach messages and communication drafts.
-    </p>
-    <div class="tool-bottom">
-     <div class="price">$299<small>ONE-TIME PRICE</small></div>
-     <div class="tool-actions">
-      <a class="btn demo-btn" href="https://ai-outreach-web.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO ↗</a>
-      <a class="btn buy-btn" href="https://link.payoneer.com/Token?t=BCF33367AACD45248CC2E3D60535E5FA&src=mobile" target="_blank" rel="noopener noreferrer">BUY NOW ↗</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- TOOL 2 -->
-   <article class="tool-card">
-    <div class="tool-top">
-     <div class="tool-icon">🏗️</div>
-     <span class="tool-tag">Construction</span>
-    </div>
-    <h3>BuildCalc Pro</h3>
-    <p>
-     A construction planning and estimation workspace for dimensions,
-     material quantities, editable rates and preliminary project budgeting.
-    </p>
-    <div class="tool-bottom">
-     <div class="price">$150<small>ONE-TIME PRICE</small></div>
-     <div class="tool-actions">
-      <a class="btn demo-btn" href="https://buildcalc-pro-pz6x.vercel.app" target="_blank" rel="noopener noreferrer">DEMO ↗</a>
-      <a class="btn buy-btn" href="https://link.payoneer.com/Token?t=643EFDDA78B04EEB981C84597A039214&src=mobile" target="_blank" rel="noopener noreferrer">BUY NOW ↗</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- TOOL 3 -->
-   <article class="tool-card">
-    <div class="tool-top">
-     <div class="tool-icon">📑</div>
-     <span class="tool-tag">Agency</span>
-    </div>
-    <h3>Agency Proposal Builder</h3>
-    <p>
-     A proposal-building tool for preparing and presenting structured
-     agency project proposals and client-facing documents.
-    </p>
-    <div class="tool-bottom">
-     <div class="price">$99<small>ONE-TIME PRICE</small></div>
-     <div class="tool-actions">
-      <a class="btn demo-btn" href="https://agency-proposal-builder.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO ↗</a>
-      <a class="btn buy-btn" href="https://link.payoneer.com/Token?t=336317ACB9E74DE6A25C9350A6391816&src=mobile" target="_blank" rel="noopener noreferrer">BUY NOW ↗</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- TOOL 4 -->
-   <article class="tool-card">
-    <div class="tool-top">
-     <div class="tool-icon">🖼️</div>
-     <span class="tool-tag">Image utility</span>
-    </div>
-    <h3>Image Resizer Tool</h3>
-    <p>
-     A simple image utility for resizing images to more convenient
-     dimensions for digital projects and everyday use.
-    </p>
-    <div class="tool-bottom">
-     <div class="price">$49<small>ONE-TIME PRICE</small></div>
-     <div class="tool-actions">
-      <a class="btn demo-btn" href="https://image-resizer-tool-one.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO ↗</a>
-      <a class="btn buy-btn" href="https://link.payoneer.com/Token?t=3128A10E961E4C11A96D1589FC704E15&src=mobile" target="_blank" rel="noopener noreferrer">BUY NOW ↗</a>
-     </div>
-    </div>
-   </article>
-
-   <!-- TOOL 5 -->
-   <article class="tool-card">
-    <div class="tool-top">
-     <div class="tool-icon">📚</div>
-     <span class="tool-tag">Productivity</span>
-    </div>
-    <h3>Study Mate Planner</h3>
-    <p>
-     A student planning workspace designed to organize study activities,
-     academic tasks and everyday learning schedules.
-    </p>
-    <div class="tool-bottom">
-     <div class="price">$25<small>ONE-TIME PRICE</small></div>
-     <div class="tool-actions">
-      <a class="btn demo-btn" href="https://studymate-student-planner-ctlw.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO ↗</a>
-      <a class="btn buy-btn" href="https://link.payoneer.com/Token?t=F75B09F66E3B4DA2B9BBB475C43E9CD9&src=mobile" target="_blank" rel="noopener noreferrer">BUY NOW ↗</a>
-     </div>
-    </div>
-   </article>
-
-  </div>
-
-  <!-- ADVERTISEMENT PLACEHOLDER -->
-  <div class="ad-slot">
-   ADVERTISEMENT SPACE
-   <!-- Add your approved Google AdSense ad unit code here after approval. -->
-  </div>
- </div>
 </section>
 
 <section class="bundle-section" id="bundle">
- <div class="container">
-  <div class="bundle">
-   <div class="bundle-content">
-    <div class="eyebrow">THE COMPLETE COLLECTION</div>
-    <h2>Get all five tools.<br>One complete bundle.</h2>
-    <p>
-     Access the complete AHMAD BUILDS digital tool collection
-     with one bundle purchase. A convenient option for buyers
-     interested in the entire product collection.
-    </p>
-
-    <div class="bundle-list">
-     <span>Outreach AI</span>
-     <span>BuildCalc Pro</span>
-     <span>Agency Proposal Builder</span>
-     <span>Image Resizer Tool</span>
-     <span>Study Mate Planner</span>
-     <span>Five products in one bundle</span>
+  <div class="container">
+    <div class="bundle">
+      <div>
+        <div class="eyebrow">THE COMPLETE COLLECTION</div>
+        <h2>Get all five tools.<br>One complete bundle.</h2>
+        <p>Explore the complete AHMAD BUILDS digital tool collection.</p>
+        <div class="bundle-list">
+          <span>Outreach AI</span>
+          <span>BuildCalc Pro</span>
+          <span>Agency Proposal Builder</span>
+          <span>Image Resizer Tool</span>
+          <span>Study Mate Planner</span>
+          <span>Five listed products</span>
+        </div>
+      </div>
+      <div class="bundle-price">
+        <small>COMPLETE TOOL COLLECTION</small>
+        <strong>$600</strong>
+        <p>One-time bundle price · Purchase details on request</p>
+        <a class="btn btn-primary" style="width:100%" href="https://wa.me/923089423733?text=Hi%2C%20I%20am%20interested%20in%20the%20AHMAD%20BUILDS%20bundle.%20Please%20share%20details." target="_blank" rel="noopener">REQUEST BUNDLE DETAILS ↗</a>
+      </div>
     </div>
-   </div>
-
-   <div class="bundle-price">
-    <small>COMPLETE TOOL COLLECTION</small>
-    <strong>$600</strong>
-    <p>One-time bundle price · All five listed tools</p>
-    <button class="btn btn-primary" disabled style="opacity:.55;cursor:not-allowed;transform:none">
-     BUNDLE PAYMENT COMING SOON
-    </button>
-    <span class="coming">PAYMENT LINK WILL BE ADDED LATER</span>
-   </div>
   </div>
- </div>
 </section>
 
 <section class="section" id="about">
- <div class="container">
-  <div class="section-head">
-   <div>
-    <div class="eyebrow">WHY AHMAD BUILDS</div>
-    <h2>Useful software.<br>Thoughtfully brought together.</h2>
-   </div>
-   <p>
-    We bring practical digital products together in one place,
-    making it easier to explore individual tools and choose
-    the products that match your workflow.
-   </p>
-  </div>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">WHY AHMAD BUILDS</div>
+        <h2>Useful software.<br>Thoughtfully brought together.</h2>
+      </div>
+      <p>We bring practical digital products together in one place, making it easier to explore individual tools.</p>
+    </div>
 
-  <div class="features">
-   <div class="feature">
-    <div class="feature-icon">⚡</div>
-    <h3>Practical digital tools</h3>
-    <p>Explore a collection of focused tools for business, construction, images and productivity.</p>
-   </div>
-   <div class="feature">
-    <div class="feature-icon">🔎</div>
-    <h3>Try before you buy</h3>
-    <p>Open the separate demo of each product and review it before making a purchase decision.</p>
-   </div>
-   <div class="feature">
-    <div class="feature-icon">🌐</div>
-    <h3>Simple access</h3>
-    <p>Visit product demos and use the individual payment links from one central marketplace.</p>
-   </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Practical digital tools</h3>
+        <p>Explore focused tools for business, construction, images and productivity.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔎</div>
+        <h3>Try before you buy</h3>
+        <p>Open each product demo and review it before making a purchase decision.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌐</div>
+        <h3>Simple access</h3>
+        <p>Contact the seller for product, licensing and delivery information.</p>
+      </div>
+    </div>
   </div>
- </div>
 </section>
 
 <section class="contact" id="contact">
- <div class="container contact-inner">
-  <div>
-   <div class="eyebrow">GET IN TOUCH</div>
-   <h2>Have a question?</h2>
-   <p>Contact us on WhatsApp for product and marketplace enquiries.</p>
-   <p style="margin-top:10px;color:#dce6f7;font-weight:700">+92 308 9423733</p>
+  <div class="container contact-inner">
+    <div>
+      <div class="eyebrow">GET IN TOUCH</div>
+      <h2>Have a question?</h2>
+      <p>Contact us on WhatsApp for product enquiries.</p>
+      <p style="margin-top:10px;color:#dce6f7;font-weight:700">+92 308 9423733</p>
+    </div>
+    <a class="btn whatsapp" href="https://wa.me/923089423733" target="_blank" rel="noopener">WHATSAPP US ↗</a>
   </div>
-  <a class="btn whatsapp" href="https://wa.me/923089423733" target="_blank" rel="noopener noreferrer">
-   WHATSAPP US ↗
-  </a>
- </div>
 </section>
 
 </main>
 
 <footer class="footer">
- <div class="container">
-  <div class="footer-grid">
-   <div class="footer-brand">
-    <a class="logo" href="#home">
-     <span class="logo-mark">AB</span>
-     <span>AHMAD <span>BUILDS</span></span>
-    </a>
-    <p>
-     An independent digital product marketplace featuring
-     practical tools for business, construction, creativity
-     and productivity.
-    </p>
-   </div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#home">
+          <span class="logo-mark">AB</span>
+          <span>AHMAD <span class="logo-name">BUILDS</span></span>
+        </a>
+        <p style="margin-top:15px;color:var(--muted);font-size:11px">An independent digital product marketplace featuring practical tools for business, construction, creativity and productivity.</p>
+      </div>
 
-   <div>
-    <h4>EXPLORE</h4>
-    <div class="footer-links">
-     <a href="#home">Home</a>
-     <a href="#tools">All digital tools</a>
-     <a href="#bundle">Complete bundle</a>
-     <a href="#about">About us</a>
-     <a href="#contact">Contact us</a>
+      <div>
+        <h4>EXPLORE</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#tools">All digital tools</a>
+          <a href="#bundle">Complete bundle</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact us</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>INFORMATION</h4>
+        <div class="footer-links">
+          <a href="#" onclick="openModal('terms');return false">Terms of Use</a>
+          <a href="#" onclick="openModal('privacy');return false">Privacy Policy</a>
+          <a href="#" onclick="openModal('refund');return false">Refund Information</a>
+          <a href="https://wa.me/923089423733" target="_blank" rel="noopener">WhatsApp Support</a>
+        </div>
+      </div>
     </div>
-   </div>
 
-   <div>
-    <h4>INFORMATION</h4>
-    <div class="footer-links">
-     <a href="#" onclick="openModal('terms');return false">Terms of Use</a>
-     <a href="#" onclick="openModal('privacy');return false">Privacy Policy</a>
-     <a href="#" onclick="openModal('refund');return false">Refund Information</a>
-     <a href="https://wa.me/923089423733" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> AHMAD BUILDS. All rights reserved.</span>
+      <span>Independent Digital Product Marketplace</span>
     </div>
-   </div>
   </div>
-
-  <div class="footer-bottom">
-   <span>© <span id="year"></span> AHMAD BUILDS. All rights reserved.</span>
-   <span>Independent Digital Product Marketplace</span>
-  </div>
- </div>
 </footer>
 
-<div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
- <div class="modal-box">
-  <div class="modal-head">
-   <h2 id="modalTitle">Information</h2>
-   <button class="close" onclick="closeModal()" aria-label="Close dialog">✕</button>
+<div class="modal" id="infoModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2 id="modalTitle">Information</h2>
+      <button class="close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-content" id="modalContent"></div>
   </div>
-  <div class="modal-content" id="modalContent"></div>
- </div>
 </div>
 
 <script>
 "use strict";
 
 const modalData = {
- about: {
-  title:"About AHMAD BUILDS",
-  content:`
-   <p>AHMAD BUILDS is an independent digital product marketplace presenting a collection of practical software tools for business, construction, productivity and creative tasks.</p>
-   <p>Visitors can explore each product through its demo link and use the corresponding payment link for individual purchases.</p>
-   <p>Product availability, functionality and included features are subject to the individual product.</p>
-  `
- },
- terms: {
-  title:"Terms of Use",
-  content:`
-   <h3>1. General information</h3>
-   <p>By accessing this website, you agree to use it lawfully and responsibly.</p>
-
-   <h3>2. Product demonstrations</h3>
-   <p>Demo buttons open separate third-party hosted product websites. Their availability, operation and content may change independently of this marketplace.</p>
-
-   <h3>3. Purchases and payment</h3>
-   <p>Individual product purchase buttons open external Payoneer payment links. Payment processing is subject to the payment provider's terms and conditions.</p>
-   <p>The complete bundle is listed at $600. Its payment link is not active yet. Do not treat the bundle as purchasable until its official payment link is published.</p>
-
-   <h3>4. Product descriptions</h3>
-   <p>Descriptions are provided for general information. Buyers should inspect the relevant demo and confirm suitability before purchasing.</p>
-
-   <h3>5. External services</h3>
-   <p>This website links to external platforms. We do not control their availability, policies or content.</p>
-
-   <h3>6. Changes</h3>
-   <p>These terms may be updated when the marketplace or its products change.</p>
-
-   <h3>7. Contact</h3>
-   <p>For enquiries, contact us through the WhatsApp number displayed on this website.</p>
-  `
- },
- privacy: {
-  title:"Privacy Policy",
-  content:`
-   <h3>Information collected</h3>
-   <p>This marketplace is designed as a static website. It does not currently provide user registration, a customer account system or a form that intentionally collects personal information.</p>
-
-   <h3>External links</h3>
-   <p>When you open a demo, WhatsApp or payment link, you interact with that external service. Its own privacy policy and data practices apply.</p>
-
-   <h3>Advertising and cookies</h3>
-   <p>If advertising services such as Google AdSense are enabled in the future, those services may use cookies or similar technologies. This policy must be updated to accurately explain the services used, consent requirements and available user controls before advertising is activated.</p>
-
-   <h3>Third-party resources</h3>
-   <p>This website loads fonts from Google Fonts. Your browser may connect to Google's services to retrieve those fonts.</p>
-
-   <h3>Contact</h3>
-   <p>For privacy questions, contact us through the WhatsApp contact details on this website.</p>
-  `
- },
- refund: {
-  title:"Refund Information",
-  content:`
-   <p>Before purchasing a product, visitors should open its demo and review its functionality and suitability.</p>
-   <p>Payment links direct buyers to an external payment provider. Any refund request is subject to the applicable purchase terms, the seller's confirmed refund policy and payment provider requirements.</p>
-   <p>Please contact us through WhatsApp with your order details if you have a purchase-related question. Never send passwords or full payment card details in a support message.</p>
-   <p><strong>Important:</strong> Confirm and publish a clear, legally appropriate refund policy before accepting customer payments.</p>
-  `
- }
+  terms: {
+    title:"Terms of Use",
+    content:`
+      <h3>General information</h3>
+      <p>Use this website lawfully and responsibly.</p>
+      <h3>Product demonstrations</h3>
+      <p>Demo buttons open separate product websites. Their availability and operation may change independently.</p>
+      <h3>Purchases and payment</h3>
+      <p>Product buttons open WhatsApp to request purchase information. A purchase is not complete until the seller confirms the product, delivery format, license terms, final price and an eligible payment method.</p>
+      <h3>Product descriptions</h3>
+      <p>Descriptions are general information. Buyers should inspect the relevant demo and confirm suitability before purchasing.</p>
+      <h3>Contact</h3>
+      <p>Contact us through the WhatsApp number displayed on this website.</p>
+    `
+  },
+  privacy: {
+    title:"Privacy Policy",
+    content:`
+      <h3>Information collected</h3>
+      <p>This static marketplace does not currently provide user registration or a customer account system.</p>
+      <h3>External links</h3>
+      <p>When you open a demo or WhatsApp link, you interact with that external service and its privacy policy applies.</p>
+      <h3>Third-party resources</h3>
+      <p>This website loads fonts from Google Fonts.</p>
+      <h3>Contact</h3>
+      <p>For privacy questions, contact us through WhatsApp.</p>
+    `
+  },
+  refund: {
+    title:"Refund Information",
+    content:`
+      <p>Before purchasing, visitors should open the product demo and review its functionality and suitability.</p>
+      <p>Refund terms must be confirmed with the seller before payment. Contact us through WhatsApp with purchase questions.</p>
+      <p>Never send passwords or full payment card details in a support message.</p>
+    `
+  }
 };
 
-function openModal(type){
- const item=modalData[type];
- if(!item)return;
- document.getElementById("modalTitle").textContent=item.title;
- document.getElementById("modalContent").innerHTML=item.content;
- document.getElementById("infoModal").classList.add("show");
- document.body.style.overflow="hidden";
-}
-function closeModal(){
- document.getElementById("infoModal").classList.remove("show");
- document.body.style.overflow="";
+function openModal(type) {
+  const item = modalData[type];
+  if (!item) return;
+  document.getElementById("modalTitle").textContent = item.title;
+  document.getElementById("modalContent").innerHTML = item.content;
+  document.getElementById("infoModal").classList.add("show");
+  document.body.style.overflow = "hidden";
 }
 
-document.getElementById("infoModal").addEventListener("click",function(e){
- if(e.target===this)closeModal();
+function closeModal() {
+  document.getElementById("infoModal").classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+const modal = document.getElementById("infoModal");
+
+modal.addEventListener("click", function(event) {
+  if (event.target === modal) closeModal();
 });
 
-document.addEventListener("keydown",function(e){
- if(e.key==="Escape")closeModal();
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") closeModal();
 });
 
-const menuBtn=document.getElementById("menuBtn");
-const navLinks=document.getElementById("navLinks");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click",()=>{
- const open=navLinks.classList.toggle("open");
- menuBtn.setAttribute("aria-expanded",String(open));
+menuBtn.addEventListener("click", function() {
+  const isOpen = navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
-navLinks.querySelectorAll("a").forEach(link=>{
- link.addEventListener("click",()=>{
-  navLinks.classList.remove("open");
-  menuBtn.setAttribute("aria-expanded","false");
- });
+navLinks.querySelectorAll("a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
 });
 
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
